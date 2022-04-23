@@ -116,7 +116,7 @@ export class SeasonClock extends React.Component {
                                 this.updateClass()
                             }} >
                                 <h3>{this.getSeason().month}({this.getSeason().season})</h3>
-                                <img src={`img/${this.getSeason().season}.PNG`} ></img>
+                                <img src={`img/${this.getSeason().season}.png`} ></img>
                                 <h3>{this.getSeason().day}</h3>
 
                             </td>
