@@ -22,24 +22,21 @@ export class MouseMonitor extends React.Component {
 
 
     addMouseListener() {
-
-
         if (this.state.isOn === true) document.addEventListener('mousemove', this.updatePos)
-
-
-        document.addEventListener("mousedown", this.removeevent);
-
     }
 
     removeevent = () => {
 
+
         if(this.state.isOn) {
             this.setState({ isOn: false })
             document.removeEventListener('mousemove', this.updatePos)
+            document.querySelector('.btn-mouse-ev').innerText = 'resume'
         }
         else {
             this.setState({ isOn: true })
             document.addEventListener('mousemove', this.updatePos)
+            document.querySelector('.btn-mouse-ev').innerText = 'pause'
 
         }
 
@@ -71,6 +68,7 @@ export class MouseMonitor extends React.Component {
                 <div className="mouse-modal">
                     <h3   >x: <span id={'x'}></span></h3>
                     <h3   >y: <span id={'y'}></span></h3>
+                    <button className={'btn-mouse-ev'} onClick ={this.removeevent}>pause</button>
                 </div>
 
 
