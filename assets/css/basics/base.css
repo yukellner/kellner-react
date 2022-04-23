@@ -1,0 +1,53 @@
+body {
+    background-color: lightblue;
+}
+
+td{
+    border: 1px black solid;
+}
+
+.light{
+    background-color: bisque;
+}
+
+.red{
+    color: red;
+}
+
+.container{
+    background-color: orangered;
+}
+
+.card-user{
+    /* border: 1px blue solid; */
+    width: 100%;
+    margin: 5px;
+}
+
+.users-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    text-align: center;
+}
+
+.user-modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    display: none;
+}
+
+.show-modal{
+    display: block;
+}
+
+.align{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
